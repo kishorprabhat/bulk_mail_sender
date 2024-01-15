@@ -1,0 +1,15 @@
+smtp:
+  server: "smtp.gmail.com"
+  port: 465
+  username: "" # Use your own email/username
+  password: "" # Use your own password
+  certs: "/home/prabhat/git/bulk_mail_sender/cacert"
+
+# CSV file with email list in first row
+email: 
+  list: "/home/prabhat/git/bulk_mail_sender/recipients.csv"
+  subject: "Python Script Sending Mails"
+  attachment:
+    send: True
+    path: "/home/prabhat/git/bulk_mail_sender/"
+    name: "Resume.pdf"
