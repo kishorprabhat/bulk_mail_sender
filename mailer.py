@@ -4,6 +4,7 @@ from email.message import EmailMessage
 import time
 import yaml
 import csv
+import os
 
 # Loading the YAML configuration
 with open("config.yaml", "r") as file:
@@ -12,8 +13,8 @@ with open("config.yaml", "r") as file:
 
 smtp_server = config["smtp"]["server"]
 smtp_port = config["smtp"]["port"]
-smtp_username = config["smtp"]["username"]
-smtp_password = config["smtp"]["password"]
+smtp_username = os.environ["USERNAME"]
+smtp_password = os.environ["PASSWORD"]
 ca_certificate = config["smtp"]["certs"]
 
 # List of recipient email addresses
@@ -21,17 +22,7 @@ recipients = config["email"]["list"]
 
 # Email content
 subject = config["email"]["subject"]
-body = """
-Hey there,
-
-Hope you are doing well . Recently I came across an opening in your company name for Senior Java Backend Engineer.
-It would be great if you could provide me a referral for the same. 
-Why me? 
-    -> 5.5+ year of Experience in Java , SpringBoot, Microservices. 
-    -> Worked in Banking Domain I have attached my resume for the same.
-
-Hope to hear from you soon. Thanks
-"""
+body = config["email"]["message"]
 
 # Attachment
 attachmentpath = config["email"]["attachment"]["path"]

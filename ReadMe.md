@@ -27,7 +27,8 @@ Pyyaml
 *Step 2:* Update `recipients.csv` with recipients email addresses
 
 *Step 3:* Run below command in your terminal
-
+    export USERNAME=<username>
+    export PASSWORD=<password>
     python3 mailer.py
 
 ## Special thanks to bard for doing most of the work

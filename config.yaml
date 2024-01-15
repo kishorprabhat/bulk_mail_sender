@@ -1,8 +1,6 @@
 smtp:
   server: "smtp.gmail.com"
   port: 465
-  username: "" # Use your own email/username
-  password: "" # Use your own password
   certs: "/home/prabhat/git/bulk_mail_sender/cacert"
 
 # CSV file with email list in first row
@@ -13,3 +11,13 @@ email:
     send: True
     path: "/home/prabhat/git/bulk_mail_sender/"
     name: "Resume.pdf"
+  message: |
+        Hey there,
+
+        Hope you are doing well . Recently I came across an opening in your company name for Senior Java Backend Engineer.
+        It would be great if you could provide me a referral for the same. 
+        Why me? 
+            -> 5.5+ year of Experience in Java , SpringBoot, Microservices. 
+            -> Worked in Banking Domain I have attached my resume for the same.
+
+        Hope to hear from you soon. Thanks
