@@ -31,6 +31,8 @@ Pyyaml
     export PASSWORD=<password>
     python3 mailer.py
 
+*Note:* Common file extensions like .env .exe, .jpg, .pdf etc are added in `.gitignore` so they don't get pushed in git repository by mistake. Check .gitignore for full reference.
+
 ## Special thanks to bard for doing most of the work
 
 <https://bard.google.com>
